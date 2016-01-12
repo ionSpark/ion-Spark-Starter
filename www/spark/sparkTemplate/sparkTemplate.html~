@@ -1,6 +1,6 @@
 <ion-view title="" id="sparkTemplate">
     <ion-content padding="'true'" class="has-header">
 
-<p>Just the basic empty page for spark plugins</p>
+
     </ion-content>
 </ion-view>
