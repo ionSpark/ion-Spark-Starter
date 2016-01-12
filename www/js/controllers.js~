@@ -1,0 +1,25 @@
+angular.module('app.controllers', [])
+
+.controller('allCtrl', function($scope) {
+
+$scope.appName = "Date-ing";
+$scope.versionNumber = "1.2";
+$scope.userFirstName = "Bob";
+$scope.userLastName = "Smith";
+$scope.twitter = "@rlarge1";
+$scope.facebook = "@large Designs";
+$scope.email = "Email Address";
+$scope.phone = "999-999-9999";
+
+
+
+
+
+$scope.userAvatar = "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg";
+$scope.avatar1 = "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg";
+$scope.avatar2 = "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg";
+$scope.avatar3 = "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg";
+$scope.avatar4 = "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg";
+$scope.avatar5 = "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg";
+
+});

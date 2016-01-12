@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+<!-- This Stops the loading flicker -->
+    <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+
+      .angular-google-map-container {
+          width: 100%;
+          height: 504px;
+      }
+    </style>
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/factorys.js"></script>
+    <script src="js/directives.js"></script>
+
+    <!-- These are spark plugins :) -->
+    <!-- inject:js -->
+    <!-- endinject -->
+  </head>
+  <body ng-cloak="" animation="slide-left-right-ios7" ng-controller="allCtrl">
+  <div>
+    <div>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar>
+
+        <ion-nav-view>
+          </ion-nav-view>
+
+    </div>
+</div>
+  </body>
+</html>

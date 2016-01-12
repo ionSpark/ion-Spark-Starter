@@ -1,0 +1,48 @@
+Spark Example Spec---
+Install the Ionic CLI
+Also install scss for Ionic framework.
+For a indepth information go to ionicframework.com.
+
+Starting an Ionic App
+$ ionic start test https://github.com/ionSpark/ionic-spark.git
+["test" is the name of you new app, whatever you would like it to be ;)]
+
+Open gulpfile.js and add...
+
+,'./www/spark/**/*.scss'
+
+to this
+
+var paths = {
+  sass: ['./scss/**/*.scss']
+};
+
+so your left with this
+
+var paths = {
+  sass: ['./scss/**/*.scss','./www/spark/**/*.scss']
+};
+
+Now that includes your css files
+
+Finally,
+
+copy your ion-spark projects to the folder spark.
+
+include your javascript in you index.html file
+
+<script src="spark/name-of-module/module.js"></script>
+
+and add them as modules to your app
+
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.factorys','app.directives', 'spark.walkthroughExample'])
+
+Thats it now your walkthough page is install
+
+$ ionic serve
+
+go to /walkthroughExample
+
+Should be there good luck and good day.
+
+Http://www.ion-spark.com for more infomation!

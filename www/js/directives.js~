@@ -1,0 +1,132 @@
+angular.module('app.directives', [])
+.directive('noScroll', function($document) {
+
+  return {
+    restrict: 'A',
+    link: function($scope, $element, $attr) {
+
+      $document.on('touchmove', function(e) {
+        e.preventDefault();
+      });
+    }
+  }
+})
+.directive('swipeList', ['$ionicGesture', function ($ionicGesture) {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            $ionicGesture.on('tap', function (e) {
+
+                var content = element[0].querySelector('.item-content');
+
+                var buttons = element[0].querySelector('.item-options');
+                var buttonsWidth = buttons.offsetWidth;
+
+                ionic.requestAnimationFrame(function() {
+					content.style[ionic.CSS.TRANSITION] = 'all ease-out .25s';
+
+					if (!buttons.classList.contains('invisible')) {
+						content.style[ionic.CSS.TRANSFORM] = '';
+						setTimeout(function() {
+							buttons.classList.add('invisible');
+						}, 250);
+					} else {
+						buttons.classList.remove('invisible');
+						content.style[ionic.CSS.TRANSFORM] = 'translate3d(-' + buttonsWidth + 'px, 0, 0)';
+					}
+				});
+
+
+            }, element);
+        }
+    };
+}])
+/*
+
+<ion-list can-swipe="true">
+        <ion-item class="item-text-wrap" swipe-list>
+         Swipe left Buttons
+            <ion-option-button class="button-light icon ion-edit" ng-click="exitslide()"></ion-option-button>
+            <ion-option-button class="button-assertive icon ion-trash-a"></ion-option-button>
+        </ion-item>
+    </ion-list>
+
+
+*/
+
+.directive('elasticHeader', function($ionicScrollDelegate) {
+	return {
+		restrict: 'A',
+		link: function(scope, scroller, attr) {
+			var scrollerHandle = $ionicScrollDelegate.$getByHandle(attr.delegateHandle);
+			var header = document.getElementById(attr.elasticHeader);
+			var headerHeight = header.clientHeight;
+			var translateAmt, scaleAmt, scrollTop, lastScrollTop;
+			var ticking = false;
+
+			// Set transform origin to top:
+			header.style[ionic.CSS.TRANSFORM + 'Origin'] = 'center bottom';
+
+			// Update header height on resize:
+			window.addEventListener('resize', function() {
+				headerHeight = header.clientHeight;
+			}, false);
+
+			scroller[0].addEventListener('scroll', requestTick);
+
+			function requestTick() {
+				if (!ticking) {
+					ionic.requestAnimationFrame(updateElasticHeader);
+				}
+				ticking = true;
+			}
+
+			function updateElasticHeader() {
+
+				scrollTop = scrollerHandle.getScrollPosition().top;
+
+				if (scrollTop >= 0) {
+					// Scrolling up. Header should shrink:
+					translateAmt = scrollTop / 2;
+					scaleAmt = 1;
+				} else {
+					// Scrolling down. Header should expand:
+					translateAmt = 0;
+					scaleAmt = -scrollTop / headerHeight + 1;
+				}
+
+				// Update header with new position/size:
+				header.style[ionic.CSS.TRANSFORM] = 'translate3d(0,'+translateAmt+'px,0) scale('+scaleAmt+','+scaleAmt+')';
+
+				ticking = false;
+			}
+		}
+	}
+})
+
+/*
+<ion-content delegate-handle="example-scroller" elastic-header="example-elastic-header" overflow-scroll="false">
+		<div id="example-elastic-header" class="background-image"></div>
+
+		<div class="content">
+    </div>
+    </ion-content>
+
+.background-image {
+	In this example we are using a background-image. But the header element could be anything.
+	background-image: url(https://ununsplash.imgix.net/photo-1421091242698-34f6ad7fc088?fit=crop&fm=jpg&h=650&q=75&w=950);
+	background-size: cover;
+	background-position: center;
+ The header must have a height:
+	height: 50vw;
+}
+
+.content {
+ Content after the elastic header need a background-color to cover the elastic header.
+	background-color: white;
+}
+
+*/
+.directive('blankDirective', [function(){
+
+}]);

@@ -1,0 +1,3 @@
+angular.module('app.factorys', [])
+.factory('BlankService', function($http){
+});

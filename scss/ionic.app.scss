@@ -1,0 +1,531 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// cursor for testing a dot
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+@font-face {
+  font-family: 'boldregular';
+  src: url(../fonts/nexa_bold-webfont.eot);
+  src: url(../fonts/nexa_bold-webfont.eot?#iefix) format('embedded-opentype'), url(../fonts/nexa_bold-webfont.woff2) format('woff2'), url(../fonts/nexa_bold-webfont.woff) format('woff'), url(../fonts/nexa_bold-webfont.ttf) format('truetype'), url(../fonts/nexa_bold-webfont.svg#nexa_boldregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lightregular';
+  src: url(../fonts/nexa_light-webfont.eot);
+  src: url(../fonts/nexa_light-webfont.eot?#iefix) format('embedded-opentype'), url(../fonts/nexa_light-webfont.woff2) format('woff2'), url(../fonts/nexa_light-webfont.woff) format('woff'), url(../fonts/nexa_light-webfont.ttf) format('truetype'), url(../fonts/nexa_light-webfont.svg#nexa_lightregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Theme related scss var */
+$light-font: lightregular;
+$bold-font: boldregular;
+$mainColor: #3A9AD9;
+$secondaryColor: #354458;
+$backgroundColor: #E9E0D6;
+$altColor1: #29ABA4;
+$altColor2: #EB7260;
+/* Ionic override css eg. backdrop color, actionsheet styling */
+
+
+
+
+
+// Main Style of app
+$stable: $mainColor;
+$positive: $mainColor;
+$calm: $backgroundColor;
+$energized: $altColor2;
+$assertive: $altColor2;
+$dark:   $secondaryColor;
+
+// Header Bar Styles
+$bar-title-font-size: 20px;
+$bar-stable-text: #fff;
+$bar-height: 50px;
+
+//Menu bar style overide
+$menu-bg: $secondaryColor;
+
+$infoColor:rgb(69, 170, 244);
+$errorColor:rgb(255, 66, 66);
+$warningColor:rgb(250, 160, 160);
+$successColor:rgb(131, 190, 106);
+
+/* Whole document css class for style */
+body {
+  font-family: $light-font !important;
+}
+h1 {
+  font-family: $bold-font !important;
+}
+h2 {
+  font-family: $bold-font !important;
+}
+h3 {
+  font-family: $bold-font !important;
+}
+//include plugin css files
+
+/* inject:imports */
+/* endinject */
+
+// Include all of Ionic --- All Edited var have to be above this!!!!
+@import "www/lib/ionic/scss/ionic";
+
+.textinfo{
+  color: $infoColor;
+}
+.texterror{
+  color: $errorColor;
+}
+.textwarn{
+  color: $warningColor;
+}
+.textsuccess{
+  color: $successColor;
+}
+/* Helper Classes */
+.textcenter {
+  text-align: center;
+}
+.textleft {
+  text-align: left;
+}
+.textright {
+  text-align: right;
+}
+.underline{
+  text-decoration:underline;
+}
+.bold{
+  text-decoration:bold;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+.pullright {
+  float: right;
+}
+.pullleft {
+  float: left;
+}
+.margin5 {
+  margin: 5px;
+}
+.margin10 {
+  margin: 10px;
+}
+.margin15 {
+  margin: 15px;
+}
+.margin20 {
+  margin: 20px;
+}
+.padding5 {
+  padding: 5px;
+}
+.padding10 {
+  padding: 10px;
+}
+.padding15 {
+  padding: 15px;
+}
+.padding20 {
+  padding: 20px;
+}
+
+// Mics
+.title-small {
+  font-size: 16px !important;
+  margin-bottom: 8px;
+}
+.titleh1 {
+  color: #fff;
+}
+
+
+/*Widgets css */
+#Widgets {
+  background-color: #cccccc;
+  .box {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background: #FFF;
+    margin: 40px auto;
+    p {}
+  }
+}
+
+/* Stacked paper widget*/
+.Stacked {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+.Stacked:before,
+.Stacked:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.Stacked:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.Stacked:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+/* box widgets*/
+.box {
+  min-width: 10px;
+  min-height: 10px;
+}
+/*==================================================
+ * Effect 1
+ * ===============================================*/
+.effect1 {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2 {
+  position: relative;
+}
+.effect2:before,
+.effect2:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+/*==================================================
+ * Effect 3
+ * ===============================================*/
+.effect3 {
+  position: relative;
+}
+.effect3:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+/*==================================================
+ * Effect 4
+ * ===============================================*/
+.effect4 {
+  position: relative;
+}
+.effect4:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+/*==================================================
+ * Effect 5
+ * ===============================================*/
+.effect5 {
+  position: relative;
+}
+.effect5:before,
+.effect5:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after {
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+/*==================================================
+ * Effect 6
+ * ===============================================*/
+.effect6 {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before,
+.effect6:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  top: 50%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+.effect6:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+/*==================================================
+ * Effect 7
+ * ===============================================*/
+.effect7 {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before,
+.effect7:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+.effect7:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+/*==================================================
+ * Effect 8
+ * ===============================================*/
+.effect8 {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before,
+.effect8:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+.effect8:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+/* thumb grid styles */
+.square-thumb-grid {
+  margin: 0 auto;
+  overflow: auto;
+  list-style-type: none;
+  li img {
+    float: left;
+    margin: 5px;
+    border: 2px solid #fff;
+  }
+}
+.round-thumb-grid {
+  margin: 0 auto;
+  overflow: auto;
+  list-style-type: none;
+  li img {
+    float: left;
+    margin: 5px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+}
+
+/* Message box styles */
+
+.isa_info, .isa_success, .isa_warning, .isa_error {
+margin: 10px 0px;
+padding:12px;
+}
+.isa_info {
+    color: #fff;
+    background-color: $infoColor;
+    border: 1px solid darken($infoColor, 15%);
+}
+.isa_success {
+    color: #fff;
+    background-color: $successColor;
+    border:1px solid darken($successColor, 15%);
+}
+.isa_warning {
+    color: #fff;
+    background-color: $warningColor;
+    border:1px solid darken($warningColor, 15%);
+}
+.isa_error {
+    color: #fff;
+    background-color: $errorColor;
+    border:1px solid darken($errorColor, 15%);
+}
+.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+    color:#fff;
+}
+
+
+
+/* list styles */
+.list-style1 {
+  ul {
+    list-style-type: none;
+  }
+  h3 {}
+  li img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 15px 0 0;
+  }
+  li p {}
+  li {
+    padding: 10px;
+    overflow: auto;
+  }
+  li date-time {}
+  li timeago {}
+}

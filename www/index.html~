@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+<!-- This Stops the loading flicker -->
+    <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+
+      .angular-google-map-container {
+          width: 100%;
+          height: 504px;
+      }
+    </style>
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="./js-includes/moment.min.js"></script>
+   <script src="./js-includes/angular-messages.js"></script>
+   <script src="./js-includes/angular-moment.min.js"></script>
+   <script src="./js-includes/collide.js"></script>
+  <script src="./js-includes/webfontloader.js"></script>
+   <script src="./js-includes/angular-fontselect.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <!-- endinjector -->
+
+
+
+    <script src="lib/cards/cardsHorizontal.js"></script>
+    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" jd-fontselect-current-href="">
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/factorys.js"></script>
+    <script src="js/directives.js"></script>
+
+    <!-- These are spark plugins :) -->
+    <!-- inject:js -->
+    <script src="spark/Customizer/Customizer.js"></script>
+    <script src="spark/animatedModal/animatedModal.js"></script>
+    <script src="spark/buttonStyles/buttonStyles.js"></script>
+    <script src="spark/buyThisNow/buyThisNow.js"></script>
+    <script src="spark/cartAdvanced/cartAdvanced.js"></script>
+    <script src="spark/cartBasic/cartBasic.js"></script>
+    <script src="spark/chatBasic/chatBasic.js"></script>
+    <script src="spark/components/components.js"></script>
+    <script src="spark/directiveButtons/directiveButtons.js"></script>
+    <script src="spark/emailBasic/emailBasic.js"></script>
+    <script src="spark/endlessScrollList/endlessScrollList.js"></script>
+    <script src="spark/flexPerfectCenter/flexPerfectCenter.js"></script>
+    <script src="spark/forgotPasswordBasic/forgotPasswordBasic.js"></script>
+    <script src="spark/forgotUsernameBasic/forgotUsernameBasic.js"></script>
+    <script src="spark/headerShrinkPage/headerShrinkPage.js"></script>
+    <script src="spark/homeBasic/homeBasic.js"></script>
+    <script src="spark/hzCardSwipable/hzCardSwipable.js"></script>
+    <script src="spark/hzImageSliderWithZoom/hzImageSliderWithZoom.js"></script>
+    <script src="spark/imageGridAdvanced/imageGridAdvanced.js"></script>
+    <script src="spark/imageGridBasic/imageGridBasic.js"></script>
+    <script src="spark/loginBasic/loginBasic.js"></script>
+    <script src="spark/loginValidation/loginValidation.js"></script>
+    <script src="spark/mapsBasic/mapsBasic.js"></script>
+    <script src="spark/ngClickWait/ngClickWait.js"></script>
+    <script src="spark/ngCordova/ngCordova.js"></script>
+    <script src="spark/parallaxHero/parallaxHero.js"></script>
+    <script src="spark/profileRound/profileRound.js"></script>
+    <script src="spark/registerBasic/registerBasic.js"></script>
+    <script src="spark/registerValidation/registerValidation.js"></script>
+    <script src="spark/settingsBasic/settingsBasic.js"></script>
+    <script src="spark/slideBoxBasic/slideBoxBasic.js"></script>
+    <script src="spark/slideMenuLeft/slideMenuLeft.js"></script>
+    <script src="spark/slideMenuLeftRight/slideMenuLeftRight.js"></script>
+    <script src="spark/slideMenuRight/slideMenuRight.js"></script>
+    <script src="spark/slideMenuSecondary/slideMenuSecondary.js"></script>
+    <script src="spark/sparkTemplate/sparkTemplate.js"></script>
+    <script src="spark/stickyHeaderCard/stickyHeaderCard.js"></script>
+    <script src="spark/stickyHeaderList/stickyHeaderList.js"></script>
+    <script src="spark/tabsBasic/tabsBasic.js"></script>
+    <script src="spark/todoBasic/todoBasic.js"></script>
+    <script src="spark/widgets/widgets.js"></script>
+    <script src="spark/walkthroughBasic/walkthroughBasic.js"></script>
+    <script src="spark/wpBlogBasic/wpBlogBasic.js"></script>
+    <!-- endinject -->
+  </head>
+  <body ng-cloak="" animation="slide-left-right-ios7" ng-controller="allCtrl">
+  <div>
+    <div>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar>
+
+        <ion-nav-view>
+          </ion-nav-view>
+
+    </div>
+</div>
+  </body>
+</html>

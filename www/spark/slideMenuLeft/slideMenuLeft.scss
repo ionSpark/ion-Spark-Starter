@@ -1,0 +1,11 @@
+#slideMenuLeft{
+  #sideMenuList {
+    // background of sidelist
+    .item,
+    .item-content {
+      background-color: $secondaryColor;
+      border-color: darken($secondaryColor, 5%);
+      color: #fff;
+    }
+  }
+}
