@@ -1,4 +1,4 @@
-IonSpark Starter
+<h1>IonSpark Starter</h1>
 
 This project aims to let you start a new app as fast as possible and add pages by copying folders to the spark folder.
 
@@ -6,9 +6,10 @@ Just clone it and you are ready to go!
 Feel free to open an issue for any question or suggestion you could have.
 
 
-Getting started
-
-install nodejs, npm, gulp, bower, cordova, ionic & sass (if not already done)
+<h3>Getting started</h3>
+<ul>
+<li>install nodejs, npm, gulp, bower, cordova, ionic & sass (if not already done)</li>
+</ul>
 git clone https://github.com/ionSpark/ion-spark.git : clone this repo
 cd ionic-starter : go to folder
 bower install : install app dependencies
